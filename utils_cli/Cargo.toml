@@ -1,0 +1,16 @@
+[package]
+name = "utils_cli"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "utils"
+path = "./src/lib/mod.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = "0.4.26"
+clap = { version = "4.3.21", features = ["derive"] }
+tempfile = "3.7.1"
+unix_mode = "0.1.3"
