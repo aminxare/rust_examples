@@ -1,6 +1,5 @@
 use std::process;
-
-use utils::{cli::cli, ls::ls};
+use utils::{cat::cat, cli::cli, ls::ls};
 
 fn main() {
     if let Err(err) = run() {
@@ -21,6 +20,11 @@ fn run() -> Result<(), Box<dyn std::error::Error>> {
             for entry in entries {
                 println!("{}", entry);
             }
+        }
+        Some(("cat", sub_matches)) => {
+            let path = sub_matches.get_one::<String>("FILE").unwrap();
+            let content = cat(path)?;
+            println!("{content}")
         }
         _ => (),
     };

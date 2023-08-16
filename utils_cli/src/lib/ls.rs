@@ -45,15 +45,14 @@ fn parse_systemtime(st: SystemTime) -> String {
 }
 
 fn append_to_filename(filename: String, txt: impl Into<String>) -> String {
-    let mut txt = txt.into();
+    let txt = txt.into();
     format!("{:>10} {filename}", txt)
 }
 
 #[cfg(test)]
 mod test {
     use super::ls; // Assuming your code is in a module named "super"
-    use std::fs::{self, File};
-    use std::io::Write;
+    use std::fs::File;
     use tempfile::TempDir;
 
     #[test]

@@ -13,5 +13,11 @@ pub fn cli() -> ArgMatches {
                 .arg(arg!(<DIR> "Directory to list").default_missing_value("."))
                 .arg_required_else_help(true),
         )
+        .subcommand(
+            Command::new("cat")
+                .about("Concatenate FILE(s) to standard output")
+                .arg(arg!(<FILE> "File to concatenate"))
+                .arg_required_else_help(true),
+        )
         .get_matches()
 }
