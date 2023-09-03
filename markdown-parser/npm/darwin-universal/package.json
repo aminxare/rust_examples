@@ -1,0 +1,15 @@
+{
+  "name": "markdown-parser-darwin-universal",
+  "version": "0.0.0",
+  "os": [
+    "darwin"
+  ],
+  "main": "markdown-parser.darwin-universal.node",
+  "files": [
+    "markdown-parser.darwin-universal.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  }
+}
